@@ -1,7 +1,8 @@
 <script lang="ts">
   export let name: string
   export let value: boolean
-  export let label: string
+  export let leftLabel: string
+  export let rightLabel: string
 
   const toggle = () => value = !value;
 
@@ -10,11 +11,15 @@
 <div class="switch-input" on:click={toggle} class:active={value}>
   <input {name} type="hidden" value={value || ''}/>
   <span class="switch-label">
-    {label}
+    {leftLabel}
   </span>
   <span class="switch-wrapper">
     <span class="switch-handle"></span>
   </span>
+  <span class="switch-label">
+    {rightLabel}
+  </span>
+
 </div>
 
 <style>
@@ -31,7 +36,7 @@
     height: 16px;
     border-radius: 30px;
     transition: background-color .3s;
-    margin-inline-start: 4px;
+    margin: 0 4px;
   }
   .active .switch-wrapper {
     background: #56BEA0;

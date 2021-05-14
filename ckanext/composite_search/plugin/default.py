@@ -22,7 +22,7 @@ class DefaultSearchPlugin(plugins.SingletonPlugin):
             if not value:
                 continue
             sign = '-' if tk.asbool(param.negation) else '+'
-            fragment = f"{sign}{param.type}:({value})"
+            fragment = f"{param.type}:* AND {sign}{param.type}:({value})"
             if query:
                 query = f'{fragment} {param.junction} ({query})'
             else:
