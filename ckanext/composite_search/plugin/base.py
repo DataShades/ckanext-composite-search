@@ -59,3 +59,5 @@ class CompositeSearchPlugin(plugins.SingletonPlugin):
                 search_params, params
             )
         return search_params
+
+    before_dataset_search = before_search
