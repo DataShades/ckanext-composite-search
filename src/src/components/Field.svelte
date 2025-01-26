@@ -62,7 +62,7 @@
     </div>
 
     <div class="remove-field-container">
-        <button type="button" class="remove-field" on:click={remove}>
+        <button type="button" class="remove-field" on:click={remove} aria-label="Remove field">
             <CloseCrossSvg /></button
         >
     </div>
