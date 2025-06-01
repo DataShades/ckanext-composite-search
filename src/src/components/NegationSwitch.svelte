@@ -6,4 +6,4 @@
 </script>
 
 
-<SwitchInput bind:value name="{$prefix}negation" leftLabel="IS" rightLabel="NOT" />
+<SwitchInput bind:value name="{$prefix}negation" leftLabel="Is" rightLabel="Not" />

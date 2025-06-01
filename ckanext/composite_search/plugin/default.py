@@ -56,7 +56,7 @@ class DefaultSearchPlugin(plugins.SingletonPlugin):
                 fragment = f"{param.type}:({value})"
 
             if query:
-                query = f'{fragment} {param.junction} ({query})'
+                query = f'{fragment} {param.junction.upper()} ({query})'
             else:
                 query = fragment
 

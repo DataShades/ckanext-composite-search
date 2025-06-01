@@ -18,8 +18,8 @@ export type FieldDefinition = TextDefinition | SelectDefinition;
 export type Definitions = { [key: string]: FieldDefinition };
 
 export enum Junction {
-  AND = "AND",
-  OR = "OR",
+  AND = "And",
+  OR = "Or",
 }
 
 export interface FieldData {
