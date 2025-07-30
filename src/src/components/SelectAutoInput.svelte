@@ -16,7 +16,7 @@
   let input;
 
   $: option = options.find(({ value: v }) => v === value);
-  $: label = option ? option.label : "";
+  $: label = option ? option.label : label || "";
 
   function toggle() {
     isOpen = !isOpen;
@@ -52,7 +52,13 @@
       "Escape",
     ];
 
+    let selectedEl = opts.querySelector("li.selected");
+
     if (!supportedKeys.includes(e.key) || !opts) {
+      if (selectedEl && e.key.length === 1) {
+        // it's a symbol key, user is editing currently selected option
+        value = "";
+      }
       return;
     }
 
@@ -60,7 +66,7 @@
       e.preventDefault();
     }
 
-    let selectedEl = opts.querySelector("li.selected");
+
 
     switch (e.key) {
       case "Enter":
@@ -161,7 +167,7 @@
     if (!searchText || searchText.length <= 1) {
       return label;
     }
-    const regex = new RegExp(searchText, "gi");
+    const regex = new RegExp(RegExp.escape(searchText), "gi");
     return label.replace(regex, '<mark class="highlight">$&</mark>');
   }
 
