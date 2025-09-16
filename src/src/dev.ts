@@ -60,12 +60,31 @@ const app = new Example({
                     { label: "RAW", value: "raw" },
                 ],
             },
+            empty_or_not: {
+                type: "autocomplete-select",
+                label: "Empty or not",
+                options: [
+                    { label: "", value: "" },
+                    { label: "Other", value: "other" },
+                ],
+            },
+            empty_with_label: {
+                type: "autocomplete-select",
+                label: "Empty with label",
+                options: [
+                    { label: "hehe", value: "" },
+                    { label: "Other", value: "other" },
+                ],
+            },
+
             attachment: { type: "text", label: "File Attachment or smth" },
         },
         data: [
             { type: "title", value: "dislike", junction: "OR", negation: true },
             { type: "organization", value: "9" },
             { type: "format", value: "" },
+            { type: "empty_or_not", value: "" },
+            { type: "empty_with_label", value: "" },
         ],
     },
 });

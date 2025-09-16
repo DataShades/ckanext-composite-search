@@ -15,7 +15,7 @@
   let opts;
   let input;
 
-  $: option = options.find(({ value: v }) => v === value);
+  $: option = options.find(({ value: v }) => v && v === value);
   $: label = option ? option.label : label || "";
 
   function toggle() {
