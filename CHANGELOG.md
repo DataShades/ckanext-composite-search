@@ -1,4 +1,11 @@
 
+## [v0.4.2](https://github.com/dataShades/ckanext-composite-search/releases/tag/v0.4.2) - 2025-09-16
+[Compare with v0.4.1](https://github.com/dataShades/ckanext-composite-search/compare/v0.4.1..v0.4.2)
+
+### 🐛 Bug Fixes
+
+- autocomplete-select do not work with empty options ([20b6f68](https://github.com/dataShades/ckanext-composite-search/commit/20b6f683564539be7379d70401e47e184d78f316))
+
 ## [v0.4.1](https://github.com/dataShades/ckanext-composite-search/releases/tag/v0.4.1) - 2025-07-30
 [Compare with v0.4.0](https://github.com/dataShades/ckanext-composite-search/compare/v0.4.0..v0.4.1)
 
